@@ -6,6 +6,7 @@ build = "build.rs"
 
 [dependencies]
 piston_window = "*"
+rgb = "0.8.11"
 
 [build-dependencies]
 winres = "0.1"
