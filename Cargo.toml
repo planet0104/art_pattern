@@ -5,8 +5,4 @@ authors = ["Jia Ye <planet0104@gmail.com>"]
 build = "build.rs"
 
 [dependencies]
-piston_window = "*"
-rgb = "0.8.11"
-
-[build-dependencies]
-winres = "0.1"
+stdweb = "0.4.8"
