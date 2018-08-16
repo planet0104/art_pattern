@@ -9,6 +9,8 @@ use stdweb::web::html_element::CanvasElement;
 use stdweb::web::INode;
 use stdweb::web::event::{ ClickEvent, IEvent };
 
+const C11:&[u8] = include_bytes!("chapter1/sample1.rs");
+
 fn main(){
     stdweb::initialize();
 
@@ -52,6 +54,26 @@ fn handle_click(_canvas: CanvasElement, context: CanvasRenderingContext2d, title
             1 => {
                 match sample{
                     1 => chapter1::sample1::draw(&context),
+                    3 => chapter1::sample3::draw(&context),
+                    4 => chapter1::sample4::draw(&context),
+                    5 => chapter1::sample5::draw(&context),
+                    6 => chapter1::sample6::draw(&context),
+                    _ => println!("未定义"),
+                }
+            },
+            _ => {
+                println!("未定义");
+            }
+        }
+    });
+
+    let close = elem_content("button", "代码");
+    li.append_child(&close);
+    button.add_event_listener(move |event: ClickEvent|{
+        match chapter{
+            1 => {
+                match sample{
+                    1 => event.target().set_text_content(),
                     3 => chapter1::sample3::draw(&context),
                     4 => chapter1::sample4::draw(&context),
                     5 => chapter1::sample5::draw(&context),
