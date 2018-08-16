@@ -4,6 +4,7 @@ pub fn draw(context: &CanvasRenderingContext2d){
 
     context.set_stroke_style_color("#000");
     context.set_line_width(1.0);
+    context.begin_path();
 
     let x_max = 540.0;
     let y_max = 190.0;
@@ -30,7 +31,8 @@ pub fn draw(context: &CanvasRenderingContext2d){
 
         i += 1.0;
     }
+    context.close_path();
     context.stroke();
 
-    context.stroke_text("例1-5 利用画线语句画一架飞机", 20.0, 250.0, None);
+    context.stroke_text("例1-5 几何图案", 20.0, 250.0, None);
 }

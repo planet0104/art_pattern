@@ -1,2 +1,8 @@
 icon下载地址:
 https://www.iconfinder.com/icons/725563/art_artist_brush_drawing_paint_paintbrush_painting_icon
+
+cargo web安装:
+cargo install cargo-web
+
+cargo web start --target=wasm32-unknown-unknown 需要nightly
+
