@@ -484,17 +484,62 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
     return {
         imports: {
             env: {
-                "__extjs_4cc2b2ed53586a2bd32ca2206724307e82bb32ff": function($0, $1) {
+                "__extjs_69920acb495ef5b5f2a2907f2b2109c50f25a632": function($0) {
+                return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof HTMLCanvasElement) | 0;
+            },
+            "__extjs_9f22d4ca7bc938409787341b7db181f8dd41e6df": function($0) {
+                Module.STDWEB_PRIVATE.increment_refcount( $0 );
+            },
+            "__extjs_80d6d56760c65e49b7be8b6b01c1ea861b046bf0": function($0) {
+                Module.STDWEB_PRIVATE.decrement_refcount( $0 );
+            },
+            "__extjs_8d5a6b319ceda81ca8c1be4bfb2a7c5f258f5f36": function($0) {
+                Module.STDWEB_PRIVATE.from_js($0, (function(){return Math.random ();})());
+            },
+            "__extjs_7c5535365a3df6a4cc1f59c4a957bfce1dbfb8ee": function($0, $1, $2, $3) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){var listener = ($1); ($2). addEventListener (($3), listener); return listener ;})());
+            },
+            "__extjs_4cc2b2ed53586a2bd32ca2206724307e82bb32ff": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). appendChild (($1));
             },
             "__extjs_ecb41cb66cfcd8472a5497d436c79755d87fa6a7": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). textContent = ($1);
+            },
+            "__extjs_496ebd7b1bc0e6eebd7206e8bee7671ea3b8006f": function($0, $1, $2) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). querySelector (($2));})());
+            },
+            "__extjs_7ed1f62e776725bc93d54f5154abfb28a460024a": function($0) {
+                return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof MouseEvent) | 0;
+            },
+            "__extjs_ff5103e6cc179d13b4c7a785bdce2708fd559fc0": function($0) {
+                Module.STDWEB_PRIVATE.tmp = Module.STDWEB_PRIVATE.to_js( $0 );
+            },
+            "__extjs_9e085d49feb14972b7db6f6771889fc83df11361": function($0, $1) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). type ;})());
+            },
+            "__extjs_93d0f284f4325906833131dc4c18c8bd0e2d9012": function($0, $1, $2) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){console.log (($1), ($2));})());
+            },
+            "__extjs_19c9ac979d3a4b50a76d6f9f7dca013c7722c1b0": function($0) {
+                Module.STDWEB_PRIVATE.from_js($0, (function(){close_code ()})());
+            },
+            "__extjs_d99ca60547d8659c7354a73a3c8458658dcf9867": function($0, $1, $2) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){show_code (($1), ($2))})());
+            },
+            "__extjs_20ad46df0c338e20bd94061cd656da90c3ba5ba5": function($0, $1) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). getContext ("2d");})());
+            },
+            "__extjs_2f0e52040c1612b5c8f209ef429c8b25c3b66f8b": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). fillStyle = ($1);
             },
             "__extjs_b42435b496a40339524d037e2aaaad915a207cea": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). lineWidth = ($1);
             },
             "__extjs_db305a6c5a92182cd239c9b558d60da7483bb5aa": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). strokeStyle = ($1);
+            },
+            "__extjs_0e2bf459d0b8f87b08234063cba9ddd7a35bfbc6": function($0, $1, $2, $3, $4, $5, $6) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);$5 = Module.STDWEB_PRIVATE.to_js($5);$6 = Module.STDWEB_PRIVATE.to_js($6);($0). arc (($1), ($2), ($3), ($4), ($5), ($6));
             },
             "__extjs_c316475a01a50f3dfea2c3ec1fbe6277eafe16f2": function($0) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);($0). beginPath ();
@@ -505,6 +550,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__extjs_9d9cfa8d9be703c5d41f3b3823a60088e5571bb3": function($0) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);($0). closePath ();
             },
+            "__extjs_ad822403fcce3173c9656c058bbbd45087d2cfa1": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). fill (($1));
+            },
             "__extjs_24e7348ebd4300e26b55234a3fd3454a78955a76": function($0, $1, $2, $3, $4) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0). fillRect (($1), ($2), ($3), ($4));
             },
@@ -514,74 +562,56 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__extjs_f930b076cc761caaaaaaf5dfb548bb4e2ef5f084": function($0, $1, $2) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);($0). moveTo (($1), ($2));
             },
+            "__extjs_052eb90e4be7830195f8967b85b711a37cf0626c": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);($0). restore ();
+            },
+            "__extjs_304c4a1c2f732cddb1e7923aa13a2f36e90e8d0f": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);($0). save ();
+            },
+            "__extjs_e23cdce588709f2e6863222b066a7d2894bf5377": function($0, $1, $2) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);($0). scale (($1), ($2));
+            },
             "__extjs_21adbe0d4961da567547899cd36d8c90c9ccc8b8": function($0) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);($0). stroke ();
+            },
+            "__extjs_774c73f8d5accb8c8e3c08b4ab0d34c70766e846": function($0, $1, $2, $3, $4) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0). strokeRect (($1), ($2), ($3), ($4));
             },
             "__extjs_7fe6ddbfbf6a0ce7c6dbcff300d81ae1f05e9b52": function($0, $1, $2, $3, $4) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0). strokeText (($1), ($2), ($3), ($4));
             },
+            "__extjs_4995242ea68f8ee70dc2ea0a987f8c3fefcb1273": function($0, $1, $2) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);($0). translate (($1), ($2));
+            },
             "__extjs_050e3f8fd41b9411cfd3fd413ce036926ced0f94": function($0) {
                 return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof CanvasRenderingContext2D) | 0;
-            },
-            "__extjs_80d6d56760c65e49b7be8b6b01c1ea861b046bf0": function($0) {
-                Module.STDWEB_PRIVATE.decrement_refcount( $0 );
-            },
-            "__extjs_db0226ae1bbecd407e9880ee28ddc70fc3322d9c": function($0) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);Module.STDWEB_PRIVATE.unregister_raw_value (($0));
-            },
-            "__extjs_97495987af1720d8a9a923fa4683a7b683e3acd6": function($0, $1) {
-                console.error( 'Panic error message:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) );
-            },
-            "__extjs_9e085d49feb14972b7db6f6771889fc83df11361": function($0, $1) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). type ;})());
-            },
-            "__extjs_7c5535365a3df6a4cc1f59c4a957bfce1dbfb8ee": function($0, $1, $2, $3) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){var listener = ($1); ($2). addEventListener (($3), listener); return listener ;})());
-            },
-            "__extjs_69920acb495ef5b5f2a2907f2b2109c50f25a632": function($0) {
-                return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof HTMLCanvasElement) | 0;
-            },
-            "__extjs_7ed1f62e776725bc93d54f5154abfb28a460024a": function($0) {
-                return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof MouseEvent) | 0;
-            },
-            "__extjs_97eced9b894ed50a197e1eb58cb8e51580fc1fda": function($0, $1, $2, $3) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){console.log (($1), ($2), ($3));})());
-            },
-            "__extjs_72fc447820458c720c68d0d8e078ede631edd723": function($0, $1, $2) {
-                console.error( 'Panic location:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) + ':' + $2 );
-            },
-            "__extjs_dc2fd915bd92f9e9c6a3bd15174f1414eee3dbaf": function() {
-                console.error( 'Encountered a panic!' );
-            },
-            "__extjs_20ad46df0c338e20bd94061cd656da90c3ba5ba5": function($0, $1) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). getContext ("2d");})());
-            },
-            "__extjs_ff5103e6cc179d13b4c7a785bdce2708fd559fc0": function($0) {
-                Module.STDWEB_PRIVATE.tmp = Module.STDWEB_PRIVATE.to_js( $0 );
-            },
-            "__extjs_690fa77630cde409b06b28d7cb33cf9d181b389e": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). height = ($1);
-            },
-            "__extjs_2f0e52040c1612b5c8f209ef429c8b25c3b66f8b": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). fillStyle = ($1);
-            },
-            "__extjs_a8e1d9cfe0b41d7d61b849811ad1cfba32de989b": function($0, $1, $2) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). createElement (($2));})());
-            },
-            "__extjs_9b6375c037b486fe12587b716aff148f791f3e6a": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). width = ($1);
-            },
-            "__extjs_496ebd7b1bc0e6eebd7206e8bee7671ea3b8006f": function($0, $1, $2) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). querySelector (($2));})());
-            },
-            "__extjs_6665489d4099b58ea29d83630ab4c8be80d7387e": function($0, $1) {
-                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). body ;})());
             },
             "__extjs_1c8769c3b326d77ceb673ada3dc887cf1d509509": function($0) {
                 Module.STDWEB_PRIVATE.from_js($0, (function(){return document ;})());
             },
-            "__extjs_9f22d4ca7bc938409787341b7db181f8dd41e6df": function($0) {
-                Module.STDWEB_PRIVATE.increment_refcount( $0 );
+            "__extjs_a8e1d9cfe0b41d7d61b849811ad1cfba32de989b": function($0, $1, $2) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). createElement (($2));})());
+            },
+            "__extjs_6665489d4099b58ea29d83630ab4c8be80d7387e": function($0, $1) {
+                $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). body ;})());
+            },
+            "__extjs_690fa77630cde409b06b28d7cb33cf9d181b389e": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). height = ($1);
+            },
+            "__extjs_9b6375c037b486fe12587b716aff148f791f3e6a": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). width = ($1);
+            },
+            "__extjs_db0226ae1bbecd407e9880ee28ddc70fc3322d9c": function($0) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);Module.STDWEB_PRIVATE.unregister_raw_value (($0));
+            },
+            "__extjs_dc2fd915bd92f9e9c6a3bd15174f1414eee3dbaf": function() {
+                console.error( 'Encountered a panic!' );
+            },
+            "__extjs_97495987af1720d8a9a923fa4683a7b683e3acd6": function($0, $1) {
+                console.error( 'Panic error message:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) );
+            },
+            "__extjs_72fc447820458c720c68d0d8e078ede631edd723": function($0, $1, $2) {
+                console.error( 'Panic location:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) + ':' + $2 );
             },
                 "__web_on_grow": __web_on_grow
             }

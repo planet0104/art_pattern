@@ -1,4 +1,4 @@
-use ::stdweb::web::CanvasRenderingContext2d;
+use stdweb::web::CanvasRenderingContext2d;
 
 pub fn draw(context: &CanvasRenderingContext2d){
 

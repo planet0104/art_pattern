@@ -1,5 +1,5 @@
-use ::stdweb::web::CanvasRenderingContext2d;
-use ::std::f64::consts::PI;
+use stdweb::web::CanvasRenderingContext2d;
+use std::f64::consts::PI;
 
 pub fn draw(context: &CanvasRenderingContext2d){
     let t = 3.0;
