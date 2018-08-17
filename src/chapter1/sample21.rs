@@ -8,7 +8,7 @@ pub fn draw(context: &CanvasRenderingContext2d){
 
     for _ in 0..50{
 
-        //上面
+        /*上面*/
         context.begin_path();
         context.set_fill_style_color(&rgb(255, 87, 87));
         context.move_to(100.0, 80.0);
@@ -18,7 +18,7 @@ pub fn draw(context: &CanvasRenderingContext2d){
         context.line_to(100.0, 80.0);
         context.fill(FillRule::NonZero);
 
-        //右面
+        /*右面*/
         context.begin_path();
         context.set_fill_style_color(&rgb(255, 255, 87));
         context.move_to(180.0, 150.0);
@@ -29,7 +29,7 @@ pub fn draw(context: &CanvasRenderingContext2d){
         context.line_to(200.0, 100.0);
         context.fill(FillRule::NonZero);
 
-        //字母A
+        /*字母A*/
         context.begin_path();
         context.set_stroke_style_color(&rgb(28, 41, 56));
         context.move_to(110.0, 140.0);
