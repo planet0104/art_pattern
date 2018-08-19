@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate stdweb;
 mod chapter1;
+mod chapter2;
 
 use stdweb::unstable::TryInto;
 use stdweb::traits::*;
@@ -27,7 +28,7 @@ fn main(){
 
     //创建菜单
     let ul = document().create_element("ul").unwrap();
-    ul.append_child({&elem_content("li", "第一部分 BASIC语言绘图入门")});
+    ul.append_child({&elem_content("li", "第一章 绘图入门")});
     ul.append_child(&{
         let ch = document().create_element("ul").unwrap();
         ch.append_child(&handle_click(context.clone(), chapter1::sample1::draw, "例1-1 画一条正弦曲线和余弦曲线", include_str!("chapter1/sample1.rs")));
@@ -45,10 +46,16 @@ fn main(){
         ch.append_child(&handle_click(context.clone(), chapter1::sample19::draw, "例1-19 五彩气泡", include_str!("chapter1/sample19.rs")));
         ch.append_child(&handle_click(context.clone(), chapter1::sample20::draw, "例1-20 紫红色三角形", include_str!("chapter1/sample20.rs")));
         ch.append_child(&handle_click(context.clone(), chapter1::sample21::draw, "例1-21 带字符图案的涂色立方体", include_str!("chapter1/sample21.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter1::sample27::draw, "例1-27 画正弦函数的字符图形", include_str!("chapter1/sample27.rs")));
         ch
     });
 
-    ul.append_child({&elem_content("li", "第二部分 平面图形程序")});
+    ul.append_child({&elem_content("li", "第二章 图案变换及操作")});
+    ul.append_child(&{
+        let ch = document().create_element("ul").unwrap();
+        ch.append_child(&handle_click(context.clone(), chapter2::sample2::draw, "例2-2 6x6个花型图案程序", include_str!("chapter2/sample2.rs")));
+        ch
+    });
 
     document().body().unwrap().append_child(&ul);
 
