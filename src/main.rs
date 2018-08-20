@@ -54,6 +54,8 @@ fn main(){
     ul.append_child(&{
         let ch = document().create_element("ul").unwrap();
         ch.append_child(&handle_click(context.clone(), chapter2::sample2::draw, "例2-2 6x6个花型图案程序", include_str!("chapter2/sample2.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample3::draw, "例2-3 对三角形进行比例变换的程序", include_str!("chapter2/sample3.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample4::draw, "例2-3 对三角形进行比例变换的程序", include_str!("chapter2/sample3.rs")));
         ch
     });
 
