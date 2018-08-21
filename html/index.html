@@ -6,13 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" name="viewport" />
     <style>
+        #params{
+            position: fixed; right: 650px;top: 600px;
+            z-index: 1;
+        }
+        #params input{
+            display: inline-block;
+            width: 30px;
+        }
         #code_div{
             border-radius: 10pt;
             border:solid 5px #77a;
             position: fixed; right: 200px;top: 30px;
             width: 783px;
             height: 600px;
-            z-index: 1;
+            z-index: 2;
             overflow: auto;
             display: none;
         }
@@ -49,5 +57,11 @@
 <pre><code class="rust" id="code_div">
 </code></pre>
 <canvas id="canvas"></canvas>
+<div id ="params">
+    参数1:<input id="param0" type="text" />
+    参数2:<input id="param1" type="text" />
+    参数3:<input id="param2" type="text" />
+    参数4:<input id="param3" type="text" />
+</div>
 </body>
 </html>

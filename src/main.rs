@@ -9,6 +9,7 @@ use stdweb::web::{Element, document, CanvasRenderingContext2d};
 use stdweb::web::html_element::CanvasElement;
 use stdweb::web::INode;
 use stdweb::web::event::{ ClickEvent, IEvent };
+use stdweb::web::html_element::InputElement;
 
 fn random() -> f64{
     js!(return Math.random(); ).try_into().unwrap()
@@ -18,6 +19,11 @@ fn rand_int(l: i32, b: i32) -> i32{
 }
 fn rgb(r:i32, g:i32, b:i32) -> String{
     format!("rgb({},{},{})", r, g, b)
+}
+
+fn get_param(i:i32) -> String{
+    let param:InputElement = document().query_selector(&format!("#param{}", i)).unwrap().unwrap().try_into().unwrap();
+    param.raw_value()
 }
 
 fn main(){
@@ -55,7 +61,13 @@ fn main(){
         let ch = document().create_element("ul").unwrap();
         ch.append_child(&handle_click(context.clone(), chapter2::sample2::draw, "例2-2 6x6个花型图案程序", include_str!("chapter2/sample2.rs")));
         ch.append_child(&handle_click(context.clone(), chapter2::sample3::draw, "例2-3 对三角形进行比例变换的程序", include_str!("chapter2/sample3.rs")));
-        ch.append_child(&handle_click(context.clone(), chapter2::sample4::draw, "例2-3 对三角形进行比例变换的程序", include_str!("chapter2/sample3.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample4::draw, "例2-4 将三角形进行旋转的程序", include_str!("chapter2/sample4.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample5::draw, "例2-5 将三角形以屏幕中心为旋转基准点的程序", include_str!("chapter2/sample5.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample6::draw, "例2-6 旋转小正方形程序-1", include_str!("chapter2/sample6.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample7::draw, "例2-7 旋转小正方形程序-2", include_str!("chapter2/sample7.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample8::draw, "例2-8 旋转小正方形程序-3", include_str!("chapter2/sample8.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample9::draw, "例2-9 矩阵图形变换", include_str!("chapter2/sample9.rs")));
+        ch.append_child(&handle_click(context.clone(), chapter2::sample10::draw, "例2-10 抛物线到圆的渐变", include_str!("chapter2/sample10.rs")));
         ch
     });
 

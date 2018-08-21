@@ -7,6 +7,7 @@ const R:f64 = 80.0;
 const DISTANCE: f64 = 110.0;
 
 pub fn draw(context: &CanvasRenderingContext2d){
+    context.set_stroke_style_color("#000");
     for px in 1..7{
         for py in 1..7{
             draw_flower(px as f64*DISTANCE, py as f64*DISTANCE, context)
