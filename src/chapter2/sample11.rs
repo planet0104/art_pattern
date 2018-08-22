@@ -8,22 +8,24 @@ pub fn draw(context: &CanvasRenderingContext2d) {
     let mut points1 = [Point::new(); 120];
     let mut points2 = [Point::new(); 120];
 
+    let nn = 35.0;
+    let r = 35.0;
+
     let mut a = 0.0f64;
     for i in 0..points1.len() {
-        points1[i].x = 28.0 * a.cos();
-        points1[i].y = 28.0 * (2.0 * a).cos();
+        points1[i].x = 1.1 * (r / 5.0 * (8.0 * a).sin() + r * (2.0 * a).sin()) * a.cos();
+        points1[i].y = 0.85 * (r / 5.0 * (8.0 * a).sin() + r * (2.0 * a).sin()) * a.sin();
         a += PI / 60.0;
     }
 
     a = 0.0;
     for i in 0..points2.len() {
-        points2[i].x = 28.0 * a.cos();
-        points2[i].y = 28.0 * a.sin();
+        points2[i].x = (r / 5.0 * (8.0 * a).sin() + r * (2.0 * a).sin()) * a.cos();
+        points2[i].y = (r / 5.0 * (8.0 * a).sin() + r * (2.0 * a).sin()) * a.sin();
         a += PI / 60.0;
     }
 
     let mut n = -1.0;
-    let nn = 35.0;
     context.begin_path();
 
     for px in (170..=470).step_by(60) {
@@ -32,7 +34,7 @@ pub fn draw(context: &CanvasRenderingContext2d) {
             let mut start = Point::new();
             for i in 0..120 {
                 let x = (points2[i].x - points1[i].x) / nn * n + points1[i].x;
-                let y = (points2[i].y - points1[i].y) / nn * n + points1[i].y;
+                let y = (points2[i].y - points1[i].y) / nn * n * 2.0 + points1[i].y;
                 let x = x + px as f64;
                 let y = y + py as f64;
                 if i == 0 {

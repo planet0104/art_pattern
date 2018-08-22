@@ -1,30 +1,30 @@
-use stdweb::web::CanvasRenderingContext2d;
-use std::f64::consts::PI;
 use random;
+use std::f64::consts::PI;
+use stdweb::web::CanvasRenderingContext2d;
 
-pub fn draw(context: &CanvasRenderingContext2d){
+pub fn draw(context: &CanvasRenderingContext2d) {
     context.set_stroke_style_color("#000");
 
-    let rotate = |x: f64, y: f64, a: f64| -> (f64, f64){
-        (x*a.cos()+y*a.sin(), y*a.cos()-x*a.sin())
+    let rotate = |x: f64, y: f64, a: f64| -> (f64, f64) {
+        (x * a.cos() + y * a.sin(), y * a.cos() - x * a.sin())
     };
 
     context.begin_path();
-    for x in (-170..170).step_by(20){
-        for y in (-170..170).step_by(20){
-            let (x,y) = (x as f64, y as f64);
+    for x in (-170..170).step_by(20) {
+        for y in (-170..170).step_by(20) {
+            let (x, y) = (x as f64, y as f64);
             let a = random() * PI;
             let mut al = 0.0;
-            while al<=2.0*PI{
+            while al <= 2.0 * PI {
                 let (x1, y1) = (10.0 * al.cos(), 10.0 * al.sin());
                 let (x2, y2) = rotate(x1, y1, a);
-                let (x, y) = (x+320.0+x2, y+200.0-y2);
-                if al == 0.0{
+                let (x, y) = (x + 320.0 + x2, y + 200.0 - y2);
+                if al == 0.0 {
                     context.move_to(x, y);
-                }else{
+                } else {
                     context.line_to(x, y);
                 }
-                al += PI/2.0;
+                al += PI / 2.0;
             }
         }
     }
