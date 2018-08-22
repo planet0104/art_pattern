@@ -1,4 +1,4 @@
-use get_param;
+use {get_param, show_params};
 use stdweb::web::CanvasRenderingContext2d;
 
 const SHAPE1: [(f64, f64); 7] = [
@@ -30,6 +30,7 @@ const SHAPE3: [(f64, f64); 7] = [
 ];
 
 pub fn draw(context: &CanvasRenderingContext2d) {
+    show_params();
     context.set_stroke_style_color("#000");
 
     /*读取参数*/

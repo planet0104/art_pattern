@@ -42,6 +42,12 @@ fn get_param(i: i32) -> String {
         .unwrap();
     param.raw_value()
 }
+fn hide_params(){
+    js!(hide_params(););
+}
+fn show_params(){
+    js!(show_params(););
+}
 
 fn main() {
     stdweb::initialize();
@@ -239,6 +245,18 @@ fn main() {
             "例2-14 渐变图形间隔按对数规律分布",
             include_str!("chapter2/sample14.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample15::draw,
+            "例2-15 4瓣花型矩形扇形变换",
+            include_str!("chapter2/sample15.rs"),
+        ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample16::draw,
+            "例2-16 6瓣花型图案圆形变换",
+            include_str!("chapter2/sample16.rs"),
+        ));
         ch
     });
 
@@ -267,6 +285,8 @@ fn handle_click(
         context.set_fill_style_color("#ffffff");
         context.clear_rect(0.0, 0.0, 800.0, 600.0);
         js!(close_code());
+        //隐藏参数
+        hide_params();
         draw(&context);
     });
 

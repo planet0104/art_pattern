@@ -502,17 +502,23 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__extjs_8d5a6b319ceda81ca8c1be4bfb2a7c5f258f5f36": function($0) {
                 Module.STDWEB_PRIVATE.from_js($0, (function(){return Math.random ();})());
             },
+            "__extjs_38702d76338b135c90cfdd4c35ff5b87a38107da": function($0) {
+                Module.STDWEB_PRIVATE.from_js($0, (function(){hide_params ();})());
+            },
+            "__extjs_99db9ad2a9e0c735c64aa6960ae4e1dd37e5e04c": function($0) {
+                Module.STDWEB_PRIVATE.from_js($0, (function(){show_params ();})());
+            },
             "__extjs_496ebd7b1bc0e6eebd7206e8bee7671ea3b8006f": function($0, $1, $2) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). querySelector (($2));})());
-            },
-            "__extjs_4cc2b2ed53586a2bd32ca2206724307e82bb32ff": function($0, $1) {
-                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). appendChild (($1));
             },
             "__extjs_7ed1f62e776725bc93d54f5154abfb28a460024a": function($0) {
                 return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof MouseEvent) | 0;
             },
             "__extjs_ff5103e6cc179d13b4c7a785bdce2708fd559fc0": function($0) {
                 Module.STDWEB_PRIVATE.tmp = Module.STDWEB_PRIVATE.to_js( $0 );
+            },
+            "__extjs_4cc2b2ed53586a2bd32ca2206724307e82bb32ff": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). appendChild (($1));
             },
             "__extjs_9e085d49feb14972b7db6f6771889fc83df11361": function($0, $1) {
                 $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return ($1). type ;})());
@@ -537,6 +543,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             },
             "__extjs_2f0e52040c1612b5c8f209ef429c8b25c3b66f8b": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). fillStyle = ($1);
+            },
+            "__extjs_be62a332d41ddd62b4b77feacf9ec13c7ccb1191": function($0, $1) {
+                $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). font = ($1);
             },
             "__extjs_b42435b496a40339524d037e2aaaad915a207cea": function($0, $1) {
                 $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0). lineWidth = ($1);
