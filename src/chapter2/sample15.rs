@@ -2,9 +2,7 @@ use std::f64::consts::PI;
 use stdweb::web::CanvasRenderingContext2d;
 
 pub fn draw(context: &CanvasRenderingContext2d) {
-    
-
-    let text =r#"
+    let text = r#"
     原图中任意点的P(X1,Y1)经过扇形变换后，点P2(X2,Y2)的坐标为:
     X2 = [L + Y1] * COS[TH] + X0
     Y2 = -[L + Y1] * SIN[TH] + X0
@@ -16,7 +14,7 @@ pub fn draw(context: &CanvasRenderingContext2d) {
     context.set_fill_style_color("#aaa");
     context.set_font("12pt Arial");
     let mut y = 400.0;
-    for line in text.lines(){
+    for line in text.lines() {
         context.fill_text(line, 10.0, y, None);
         y += 22.0;
     }
@@ -29,7 +27,7 @@ pub fn draw(context: &CanvasRenderingContext2d) {
     let l = 280.0;
 
     /*扇形圆心坐标 */
-    let (x0,y0) = (320.0,700.0);
+    let (x0, y0) = (320.0, 700.0);
 
     let c = PI / 3.0;
     let r = x / 9.0;

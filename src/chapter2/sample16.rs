@@ -3,8 +3,7 @@ use stdweb::web::CanvasRenderingContext2d;
 use Point;
 
 pub fn draw(context: &CanvasRenderingContext2d) {
-    
-    let text =r#"
+    let text = r#"
         带状图形上任意点P(X1,Y1)变换为环状图上点P(X2,Y2)，其坐标之间关系为:
         X2 = [L + Y1] * COS[TH] + PX
         Y2 = -[L + Y1] * SIN[TH] + PY
@@ -16,7 +15,7 @@ pub fn draw(context: &CanvasRenderingContext2d) {
     context.set_fill_style_color("#aaa");
     context.set_font("12pt Arial");
     let mut y = 400.0;
-    for line in text.lines(){
+    for line in text.lines() {
         context.fill_text(line, 10.0, y, None);
         y += 22.0;
     }
@@ -28,30 +27,30 @@ pub fn draw(context: &CanvasRenderingContext2d) {
 
     context.begin_path();
 
-    let mut px = w/2.0;
+    let mut px = w / 2.0;
     let mut start = Point::new();
-    while px<=7.0*w+w/2.0{
+    while px <= 7.0 * w + w / 2.0 {
         let mut a = 0.0;
-        while a<2.0*PI{
-            let d = w/2.0*(4.0/5.0+1.0/5.0*(18.0*a).sin())*1.2;
-            let t = d*(1.0/2.0+1.0/2.0*(6.0*a).sin());
-            let x1 = px+t*a.cos();
-            let y1 = w/2.0-t*a.sin();
-            
+        while a < 2.0 * PI {
+            let d = w / 2.0 * (4.0 / 5.0 + 1.0 / 5.0 * (18.0 * a).sin()) * 1.2;
+            let t = d * (1.0 / 2.0 + 1.0 / 2.0 * (6.0 * a).sin());
+            let x1 = px + t * a.cos();
+            let y1 = w / 2.0 - t * a.sin();
+
             /*变换 */
-            let th = 2.0*PI*(x-x1)/x;
-            let x2 = (l+y1)*th.cos()+320.0;
-            let y2 = (l+y1)*th.sin()+200.0;
+            let th = 2.0 * PI * (x - x1) / x;
+            let x2 = (l + y1) * th.cos() + 320.0;
+            let y2 = (l + y1) * th.sin() + 200.0;
 
             /*画线 */
-            if a==0.0{
+            if a == 0.0 {
                 context.move_to(x2, y2);
                 start.x = x2;
                 start.y = y2;
-            }else{
+            } else {
                 context.line_to(x2, y2);
             }
-            a += PI/84.0;/*步进越画的图越精细 */
+            a += PI / 84.0; /*步进越画的图越精细 */
         }
         context.line_to(start.x, start.y);
         px += w;

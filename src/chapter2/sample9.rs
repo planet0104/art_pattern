@@ -1,5 +1,5 @@
-use {get_param, show_params};
 use stdweb::web::CanvasRenderingContext2d;
+use {get_param, show_params};
 
 const SHAPE1: [(f64, f64); 7] = [
     (79.0, 14.0),

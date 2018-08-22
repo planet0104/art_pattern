@@ -42,10 +42,10 @@ fn get_param(i: i32) -> String {
         .unwrap();
     param.raw_value()
 }
-fn hide_params(){
+fn hide_params() {
     js!(hide_params(););
 }
-fn show_params(){
+fn show_params() {
     js!(show_params(););
 }
 
