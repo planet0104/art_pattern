@@ -257,6 +257,24 @@ fn main() {
             "例2-16 6瓣花型图案圆形变换",
             include_str!("chapter2/sample16.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample17::draw,
+            "例2-17 二重环形变换程序例1",
+            include_str!("chapter2/sample17.rs"),
+        ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample18::draw,
+            "例2-18 二重环形变换程序例2",
+            include_str!("chapter2/sample18.rs"),
+        ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample19::draw,
+            "例2-19 二重变换花形程序例3",
+            include_str!("chapter2/sample19.rs"),
+        ));
         ch
     });
 
