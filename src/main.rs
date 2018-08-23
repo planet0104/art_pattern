@@ -278,7 +278,7 @@ fn main() {
         ch.append_child(&handle_click(
             context.clone(),
             chapter2::sample20::draw,
-            "例2-19 三重环状图案程序例",
+            "例2-20 三重环状图案程序例",
             include_str!("chapter2/sample20.rs"),
         ));
         ch
