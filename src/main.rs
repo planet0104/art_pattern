@@ -275,6 +275,12 @@ fn main() {
             "例2-19 二重变换花形程序例3",
             include_str!("chapter2/sample19.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample20::draw,
+            "例2-19 三重环状图案程序例",
+            include_str!("chapter2/sample20.rs"),
+        ));
         ch
     });
 
