@@ -2,6 +2,7 @@
 extern crate stdweb;
 mod chapter1;
 mod chapter2;
+mod chapter3;
 
 use stdweb::traits::*;
 use stdweb::unstable::TryInto;
@@ -41,6 +42,15 @@ fn get_param(i: i32) -> String {
         .try_into()
         .unwrap();
     param.raw_value()
+}
+fn set_param(i: i32, value: &str) {
+    let param: InputElement = document()
+        .query_selector(&format!("#param{}", i))
+        .unwrap()
+        .unwrap()
+        .try_into()
+        .unwrap();
+    param.set_raw_value(value);
 }
 fn hide_params() {
     js!(hide_params(););
@@ -304,6 +314,18 @@ fn main() {
             chapter2::sample24::draw,
             "例2-24 球面镜反射变换程序",
             include_str!("chapter2/sample24.rs"),
+        ));
+        ch
+    });
+
+    ul.append_child({ &elem_content("li", "第三章 图案程序60例") });
+    ul.append_child(&{
+        let ch = document().create_element("ul").unwrap();
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter3::sample1::draw,
+            "例3-1 圆图案",
+            include_str!("chapter3/sample1.rs"),
         ));
         ch
     });
