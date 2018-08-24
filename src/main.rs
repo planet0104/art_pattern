@@ -327,6 +327,18 @@ fn main() {
             "例3-1 圆图案",
             include_str!("chapter3/sample1.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter3::sample2::draw,
+            "例3-2 正弦波图案",
+            include_str!("chapter3/sample2.rs"),
+        ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter3::sample3::draw,
+            "例3-3 合成正弦波函数图案",
+            include_str!("chapter3/sample3.rs"),
+        ));
         ch
     });
 
