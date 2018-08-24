@@ -281,6 +281,12 @@ fn main() {
             "例2-20 三重环状图案程序例",
             include_str!("chapter2/sample20.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample21::draw,
+            "例2-21 六瓣花三角形变换",
+            include_str!("chapter2/sample21.rs"),
+        ));
         ch
     });
 
