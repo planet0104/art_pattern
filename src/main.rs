@@ -293,6 +293,18 @@ fn main() {
             "例2-22 6x6个花型单元三角函数变换",
             include_str!("chapter2/sample22.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample23::draw,
+            "例2-23 球面镜反射变换程序",
+            include_str!("chapter2/sample23.rs"),
+        ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample24::draw,
+            "例2-24 球面镜反射变换程序",
+            include_str!("chapter2/sample24.rs"),
+        ));
         ch
     });
 

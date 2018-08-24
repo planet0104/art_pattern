@@ -634,6 +634,9 @@ Module.STDWEB_PRIVATE.acquire_tmp = function( dummy ) {
             "__extjs_72fc447820458c720c68d0d8e078ede631edd723": function($0, $1, $2) {
                 console.error( 'Panic location:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) + ':' + $2 );
             },
+            "Math_atan": function($0) {
+                return Math.atan( $0 );
+            },
                 "__web_on_grow": __web_on_grow
             }
         },

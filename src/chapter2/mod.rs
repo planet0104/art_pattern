@@ -12,6 +12,8 @@ pub mod sample2;
 pub mod sample20;
 pub mod sample21;
 pub mod sample22;
+pub mod sample23;
+pub mod sample24;
 pub mod sample3;
 pub mod sample4;
 pub mod sample5;
