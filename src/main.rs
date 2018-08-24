@@ -287,6 +287,12 @@ fn main() {
             "例2-21 六瓣花三角形变换",
             include_str!("chapter2/sample21.rs"),
         ));
+        ch.append_child(&handle_click(
+            context.clone(),
+            chapter2::sample22::draw,
+            "例2-22 6x6个花型单元三角函数变换",
+            include_str!("chapter2/sample22.rs"),
+        ));
         ch
     });
 
